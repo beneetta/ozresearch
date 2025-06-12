@@ -28,6 +28,9 @@ const Home: React.FC = () => {
               <Link to="/login?role=author" className="block w-full bg-[#4A5D8A] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#3A4D7A] transition-colors duration-200">
                 LOGIN
               </Link>
+              <Link to="/author/dashboard" className="block w-full bg-[#2C3E50] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#1A2C3E] transition-colors duration-200">
+                VIEW DASHBOARD
+              </Link>
             </div>
           </div>
 
@@ -44,6 +47,9 @@ const Home: React.FC = () => {
               <Link to="/login?role=reviewer" className="block w-full bg-[#4A5D8A] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#3A4D7A] transition-colors duration-200">
                 LOGIN
               </Link>
+              <Link to="/reviewer/dashboard" className="block w-full bg-[#2C3E50] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#1A2C3E] transition-colors duration-200">
+                VIEW DASHBOARD
+              </Link>
             </div>
           </div>
 
@@ -59,6 +65,9 @@ const Home: React.FC = () => {
               </Link>
               <Link to="/login?role=editor" className="block w-full bg-[#4A5D8A] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#3A4D7A] transition-colors duration-200">
                 LOGIN
+              </Link>
+              <Link to="/editor/dashboard" className="block w-full bg-[#2C3E50] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#1A2C3E] transition-colors duration-200">
+                VIEW DASHBOARD
               </Link>
             </div>
           </div>
