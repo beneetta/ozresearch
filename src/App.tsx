@@ -31,43 +31,43 @@ import EditorEditProfile from './pages/editor/EditProfile';
 
 function App() {
   return (
-    
+    <Layout>
       <Routes>
-                  {/* Public Pages */}
-          <Route index element={<Home />} />
-          <Route path="register" element={<Register />} />
-          <Route path="login" element={<Login />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
+        {/* Public Pages */}
+        <Route index element={<Home />} />
+        <Route path="register" element={<Register />} />
+        <Route path="login" element={<Login />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
 
-          {/* Author Pages */}
-          <Route path="author/dashboard" element={<AuthorDashboard />} />
-          <Route path="author/submit" element={<SubmitManuscript />} />
-          <Route path="author/payment" element={<PaymentPage />} />
-          <Route path="author/track" element={<TrackSubmission />} />
-          <Route path="author/edit-profile" element={<EditProfile />} />
-          <Route path="author/notifications" element={<NotificationCenter />} />
-          <Route path="author/submissions" element={<SubmissionHistory />} />
+        {/* Author Pages */}
+        <Route path="author/dashboard" element={<AuthorDashboard />} />
+        <Route path="author/submit" element={<SubmitManuscript />} />
+        <Route path="author/payment" element={<PaymentPage />} />
+        <Route path="author/track" element={<TrackSubmission />} />
+        <Route path="author/edit-profile" element={<EditProfile />} />
+        <Route path="author/notifications" element={<NotificationCenter />} />
+        <Route path="author/submissions" element={<SubmissionHistory />} />
 
-          {/* Reviewer Pages */}
-          <Route path="reviewer/dashboard" element={<ReviewerDashboard />} />
-          <Route path="reviewer/invitations" element={<Invitations />} />
-          <Route path="reviewer/assigned" element={<AssignedManuscripts />} />
-          <Route path="reviewer/review-history" element={<ReviewHistory />} />
-          <Route path="reviewer/edit-profile" element={<ReviewerEditProfile />} />
-          <Route path="reviewer/notifications" element={<ReviewerNotifications />} />
+        {/* Reviewer Pages */}
+        <Route path="reviewer/dashboard" element={<ReviewerDashboard />} />
+        <Route path="reviewer/invitations" element={<Invitations />} />
+        <Route path="reviewer/assigned" element={<AssignedManuscripts />} />
+        <Route path="reviewer/review-history" element={<ReviewHistory />} />
+        <Route path="reviewer/edit-profile" element={<ReviewerEditProfile />} />
+        <Route path="reviewer/notifications" element={<ReviewerNotifications />} />
 
-          {/* Editor Pages */}
-          <Route path="editor/dashboard" element={<EditorDashboard />} />
-          <Route path="editor/assigned" element={<EditorAssignedManuscripts />} />
-          <Route path="editor/assign-reviewers" element={<AssignReviewers />} />
-          <Route path="editor/ai-report" element={<AIReport />} />
-          <Route path="editor/create-conference" element={<CreateConference />} />
-          <Route path="editor/track-peer-review" element={<TrackPeerReview />} />
-          <Route path="editor/notifications" element={<EditorNotificationCenter />} />
-          <Route path="editor/edit-profile" element={<EditorEditProfile />} />
-        </Routes>
-    
+        {/* Editor Pages */}
+        <Route path="editor/dashboard" element={<EditorDashboard />} />
+        <Route path="editor/assigned" element={<EditorAssignedManuscripts />} />
+        <Route path="editor/assign-reviewers" element={<AssignReviewers />} />
+        <Route path="editor/ai-report" element={<AIReport />} />
+        <Route path="editor/create-conference" element={<CreateConference />} />
+        <Route path="editor/track-peer-review" element={<TrackPeerReview />} />
+        <Route path="editor/notifications" element={<EditorNotificationCenter />} />
+        <Route path="editor/edit-profile" element={<EditorEditProfile />} />
+      </Routes>
+    </Layout>
   );
 }
 
