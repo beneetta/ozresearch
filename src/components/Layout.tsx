@@ -1,17 +1,13 @@
-// src/components/Layout.tsx
 import React from 'react';
 import Navbar from './Navbar';
+import { Outlet } from 'react-router-dom';
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout = () => {
   return (
     <div className="min-h-screen bg-[#B8CDD9]">
       <Navbar />
       <main className="p-4">
-        {children}
+        <Outlet />
       </main>
     </div>
   );
