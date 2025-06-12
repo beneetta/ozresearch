@@ -22,6 +22,18 @@ const Navbar: React.FC = () => {
         <Link to="/about" className="text-white hover:text-gray-300 transition-colors">About</Link>
         <Link to="/contact" className="text-white hover:text-gray-300 transition-colors">Contact</Link>
       </nav>
+
+      {/* Dropdown Menu */}
+  <div className="group relative">
+    <button className="text-white hover:text-gray-300 transition-colors">
+      Dashboards ▾
+    </button>
+    <div className="absolute hidden group-hover:block bg-white text-black mt-2 py-2 w-48 rounded shadow-md z-50">
+      <Link to="/author/dashboard" className="block px-4 py-2 hover:bg-gray-100">Author Dashboard</Link>
+      <Link to="/reviewer/dashboard" className="block px-4 py-2 hover:bg-gray-100">Reviewer Dashboard</Link>
+      <Link to="/editor/dashboard" className="block px-4 py-2 hover:bg-gray-100">Editor Dashboard</Link>
+    </div>
+  </div>
     </div>
   );
 };

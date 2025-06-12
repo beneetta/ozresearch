@@ -33,6 +33,10 @@ function App() {
   return (
     <Layout>
       <Routes>
+        <Route path="author/dashboard" element={<AuthorDashboard />} />
+        <Route path="reviewer/dashboard" element={<ReviewerDashboard />} />
+        <Route path="editor/dashboard" element={<EditorDashboard />} />
+
         {/* Public Pages */}
         <Route index element={<Home />} />
         <Route path="register" element={<Register />} />
