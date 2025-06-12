@@ -1,8 +1,6 @@
-// Description: Main application file that sets up routing for the React application.
-// src/App.tsx
-
+// src/App.tsximport React from 'react';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Register from './pages/Register';
@@ -31,164 +29,45 @@ import TrackPeerReview from './pages/editor/TrackPeerReview';
 import EditorNotificationCenter from './pages/editor/Notifications';
 import EditorEditProfile from './pages/editor/EditProfile';
 
-
-
 function App() {
   return (
-    <Router>
+    
       <Routes>
-        <Route path="/" element={<Layout><Home /></Layout>} />
-        <Route path="/" element={<Home />} />
-        <Route path="/register" element={
-          <Layout>
-            <Register />
-          </Layout>
-        } />
-        <Route path="/login" element={
-          
-          <Layout>
-            <Login />
-          </Layout>
-        } />
-        <Route path="/about" element={
-          <Layout>
-            <About />
-          </Layout>
-        } />
-        <Route path="/contact" element={
-          <Layout>
-            <Contact />
-          </Layout>
-        } />
-        <Route path="/author/submit" element={<Layout><SubmitManuscript /></Layout>} />
-        
-        <Route path="/author/dashboard" element={
-            <Layout>
-    <AuthorDashboard />
-  </Layout>
-} />
-  <Route path="/author/track" element={
-  <Layout>
-    <TrackSubmission />
-  </Layout>
-} />
-<Route path="/author/payment" element={
-  <Layout>
-    <PaymentPage />
-  </Layout>
-} />
+                  {/* Public Pages */}
+          <Route index element={<Home />} />
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
 
-  <Route
-  path="/author/edit-profile"
-  element={
-    <Layout>
-      <EditProfile />
-    </Layout>
-  }
-/>
-<Route
-  path="/author/notifications"
-  element={
-    <Layout>
-      <EditorNotificationCenter />
-    </Layout>
-  }
-/>
-<Route
-  path="/author/submissions"
-  element={
-    <Layout>
-      <SubmissionHistory />
-    </Layout>
-  }
-/>
+          {/* Author Pages */}
+          <Route path="author/dashboard" element={<AuthorDashboard />} />
+          <Route path="author/submit" element={<SubmitManuscript />} />
+          <Route path="author/payment" element={<PaymentPage />} />
+          <Route path="author/track" element={<TrackSubmission />} />
+          <Route path="author/edit-profile" element={<EditProfile />} />
+          <Route path="author/notifications" element={<NotificationCenter />} />
+          <Route path="author/submissions" element={<SubmissionHistory />} />
 
-<Route
-  path="/reviewer/dashboard"
-  element={
-    <Layout>
-      <ReviewerDashboard />
-    </Layout>
-  }
-/>
-<Route path="/reviewer/invitations" element={<Invitations />} />
-<Route path="/reviewer/assigned" element={<AssignedManuscripts />} />
-<Route path="/reviewer/review-history" element={
-  <Layout>
-    <ReviewHistory />
-  </Layout>
-} />
-<Route path="/reviewer/edit-profile" element={
-  <Layout>
-    <ReviewerEditProfile />
-  </Layout>
-} />
-<Route path="/reviewer/notifications" element={<ReviewerNotifications />} />
-<Route path="/editor/dashboard" element={
-  <Layout>
-    <EditorDashboard />
-  </Layout>
-} />
+          {/* Reviewer Pages */}
+          <Route path="reviewer/dashboard" element={<ReviewerDashboard />} />
+          <Route path="reviewer/invitations" element={<Invitations />} />
+          <Route path="reviewer/assigned" element={<AssignedManuscripts />} />
+          <Route path="reviewer/review-history" element={<ReviewHistory />} />
+          <Route path="reviewer/edit-profile" element={<ReviewerEditProfile />} />
+          <Route path="reviewer/notifications" element={<ReviewerNotifications />} />
 
-<Route path="/editor/assigned" element={
-  <Layout>
-    <EditorAssignedManuscripts />
-  </Layout>
-} />
-
-<Route
-  path="/editor/assign-reviewers"
-  element={
-    <Layout>
-      <AssignReviewers />
-    </Layout>
-  }
-/>
-
-
-<Route
-  path="/editor/ai-report"
-  element={
-    <Layout>
-      <AIReport />
-    </Layout>
-  }
-/>
-<Route
-  path="/editor/create-conference"
-  element={
-    <Layout>
-      <CreateConference />
-    </Layout>
-  }
-/>
-<Route
-  path="/editor/track-peer-review"
-  element={
-    <Layout>
-      <TrackPeerReview />
-    </Layout>
-  }
-/>
-
-<Route
-  path="/editor/notifications"
-  element={
-    <Layout>
-      <NotificationCenter />
-    </Layout>
-  }
-/>
-<Route path="/editor/edit-profile" element={
-  <Layout>
-    <EditorEditProfile />
-  </Layout>
-} />
-
-
-
-      </Routes>
-    </Router>
+          {/* Editor Pages */}
+          <Route path="editor/dashboard" element={<EditorDashboard />} />
+          <Route path="editor/assigned" element={<EditorAssignedManuscripts />} />
+          <Route path="editor/assign-reviewers" element={<AssignReviewers />} />
+          <Route path="editor/ai-report" element={<AIReport />} />
+          <Route path="editor/create-conference" element={<CreateConference />} />
+          <Route path="editor/track-peer-review" element={<TrackPeerReview />} />
+          <Route path="editor/notifications" element={<EditorNotificationCenter />} />
+          <Route path="editor/edit-profile" element={<EditorEditProfile />} />
+        </Routes>
+    
   );
 }
 
